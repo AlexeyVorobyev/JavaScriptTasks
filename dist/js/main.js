@@ -92,7 +92,6 @@ function clock() {
 }
 
 setInterval(clock,1000);
-setInterval(function () {checkCalendar = true;},1000000);
 
 
 
