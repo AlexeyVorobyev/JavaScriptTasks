@@ -1,0 +1,85 @@
+.section-1 {
+  padding:60px 30px;
+}
+
+.section-1__header {
+  text-align: center;
+  margin:0;
+  font-family: 'Roboto',SansSerif;
+  font-size: 36px;
+  font-weight:bold;
+  color:#db545a;
+}
+
+.section-1__rectangle {
+  background-color: #db545a;
+  width:100px;
+  height:8px;
+  margin:30px auto 0;
+}
+
+.wrapperSection-1 {
+  display: flex;
+  flex-direction: column;
+  max-width: 992px;
+  gap:10px;
+  margin:30px auto 0;
+
+}
+
+.cardQuestion {
+  background-color: white;
+  text-align: left;
+  padding: 0;
+  border: none;
+}
+
+.cardQuestion__questionContainer:hover {
+  background-color: #db545a;
+  color: white;
+}
+
+.cardQuestion__questionContainer {
+  color: #db545a;
+  display: flex;
+  background-color: #f1c50e;
+  border-radius: 12px;
+  padding:0 25px;
+  align-items: center;
+  height:100px;
+}
+
+.cardQuestion__questionParagraph {
+  color: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  padding-right: 30px;
+}
+
+.cardQuestion__spacer {
+  margin-left:auto;
+  width:20px;
+  height:20px;
+}
+
+.cardQuestion__questionContainer:hover .cardQuestion__icon{
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(70deg) brightness(99%) contrast(107%);
+}
+
+.cardQuestion__icon {
+  box-sizing: border-box;
+  width: inherit;
+  height: inherit;
+  filter: invert(43%) sepia(72%) saturate(837%) hue-rotate(315deg) brightness(89%) contrast(92%);
+}
+
+.cardQuestion__answerContainer {
+  padding: 30px 30px 60px;
+  display: none;
+}
+
+.cardQuestion__questionAnswer {
+  margin: 0;
+  font-size: 16px;
+  line-height: calc(16px*1.6);
+}
