@@ -1,0 +1,16 @@
+.task1 {
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  height:200px;
+}
+
+.task1_data {
+  font-size: 26px;
+  margin:0;
+}
+
+.task1_time {
+  font-size: 20px;
+  margin:20px 0 0;
+}
