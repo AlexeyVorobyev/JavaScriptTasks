@@ -1,28 +1,82 @@
-const cardQuestionButtonArr = document.getElementsByClassName("cardQuestion__questionContainer");
-const cardQuestionAnswerArr = document.getElementsByClassName("cardQuestion__answerContainer");
-const cardQuestionIconArr = document.getElementsByClassName("cardQuestion__icon")
+const cardQuestionButtonArr = document.getElementsByClassName('cardQuestion__questionContainer');
+const cardQuestionAnswerArr = document.getElementsByClassName('cardQuestion__answerContainer');
+const cardQuestionIconArr = document.getElementsByClassName('cardQuestion__icon');
 
 for (let i = 0; i < 4; i++) {
-  cardQuestionButtonArr[i].addEventListener("click",function () {
-    if (cardQuestionAnswerArr[i].style.display == "flex") {
-      cardQuestionAnswerArr[i].style.display = "";
-      cardQuestionButtonArr[i].style.backgroundColor = "";
-      cardQuestionButtonArr[i].style.color = "";
-      cardQuestionIconArr[i].style.filter = "";
+  cardQuestionButtonArr[i].addEventListener('click',function () {
+    if (cardQuestionAnswerArr[i].style.display == 'flex') {
+      cardQuestionAnswerArr[i].style.display = '';
+      cardQuestionButtonArr[i].style.backgroundColor = '';
+      cardQuestionButtonArr[i].style.color = '';
+      cardQuestionIconArr[i].style.filter = '';
     }
     else {
-      cardQuestionAnswerArr[i].style.display = "flex";
-      cardQuestionButtonArr[i].style.backgroundColor = "#db545a";
-      cardQuestionButtonArr[i].style.color = "white";
-      cardQuestionIconArr[i].style.filter = "invert(100%) sepia(0%) saturate(7500%) hue-rotate(70deg) brightness(99%) contrast(107%)";
+      cardQuestionAnswerArr[i].style.display = 'flex';
+      cardQuestionButtonArr[i].style.backgroundColor = '#db545a';
+      cardQuestionButtonArr[i].style.color = 'white';
+      cardQuestionIconArr[i].style.filter = 'invert(100%) sepia(0%) saturate(7500%) hue-rotate(70deg) brightness(99%) contrast(107%)';
     }
   });
 }
 
-const dataElem = document.getElementsByClassName("task1_data")[0];
-const timeElem = document.getElementsByClassName("task1_time")[0];
+const dataElem = document.getElementsByClassName('task1_data')[0];
+const timeElem = document.getElementsByClassName('task1_time')[0];
+const calendar = document.getElementsByClassName('calendar')[0];
 const dayWeekArr = ['понедельник','вторник','среда','четверг','пятница','суббота','воскресенье'];
-const monthArr = ['январь','феварль','март','апрель','май','июнь','июль','август','сентябрь','октябрь','ноябрь','декабрь']
+const monthArr = ['январь','февраль','март','апрель','май','июнь','июль','август','сентябрь','октябрь','ноябрь','декабрь'];
+let checkCalendar = true;
+function calendarGridFiller(month,dayWeek,day) {
+  checkCalendar = false;
+  const initDay = day;
+  const calendarMonth = calendar.childNodes[1];
+  const calendarGrid = calendar.getElementsByClassName('calendar_grid')[0];
+  calendarGrid.childNodes.forEach(elem => elem.remove());
+  calendarMonth.textContent = monthArr[month];
+
+  day%=7; dayWeek-=day; if (dayWeek < 0) dayWeek = 7 - dayWeek;
+
+  let daysInMonth = 0;
+  if ([1,4,6,8,10].includes(month)) daysInMonth = 31;
+  else if (month == 2) daysInMonth = 28;
+  else daysInMonth = 30;
+
+  let counter = 0;
+
+  for (let i = daysInMonth - dayWeek + 1; i < daysInMonth + 1;i++) {
+    const calendarDayElem = document.createElement('p');
+    calendarDayElem.textContent = i.toString();
+    calendarDayElem.className = 'calendar_dayMarker';
+    calendarDayElem.style.color = 'grey';
+    calendarGrid.appendChild(calendarDayElem);
+    counter++;
+  }
+
+  if ([0,2,4,6,8,10].includes(month)) daysInMonth = 31;
+  else if (month == 1) daysInMonth = 28;
+  else daysInMonth = 30;
+
+  for (let i = 1; i <= daysInMonth;i++) {
+    const calendarDayElem = document.createElement('p');
+    calendarDayElem.textContent = i.toString();
+    calendarDayElem.className = 'calendar_dayMarker';
+    calendarGrid.appendChild(calendarDayElem);
+    if (i == initDay) {
+      calendarDayElem.style.color = '#db545a';
+      calendarDayElem.style.backgroundColor = '#f1c50e';
+    }
+    counter++;
+  }
+
+  counter = 7 - counter%7;
+
+  for (let i = 1; i <= counter;i++) {
+    const calendarDayElem = document.createElement('p');
+    calendarDayElem.textContent = i.toString();
+    calendarDayElem.className = 'calendar_dayMarker';
+    calendarDayElem.style.color = 'grey';
+    calendarGrid.appendChild(calendarDayElem);
+  }
+}
 function clock() {
   const date = new Date();
   const hours = (date.getHours() < '10') ? '0' + date.getHours() : date.getHours();
@@ -34,6 +88,13 @@ function clock() {
   const year = date.getFullYear();
   const month = date.getMonth();
   dataElem.textContent = dayWeekArr[dayWeek] + ', ' + year + ' ' + day + ' ' + monthArr[month];
+  if (checkCalendar) calendarGridFiller(month,dayWeek,day);
 }
 
 setInterval(clock,1000);
+setInterval(function () {checkCalendar = true;},1000000);
+
+
+
+
+

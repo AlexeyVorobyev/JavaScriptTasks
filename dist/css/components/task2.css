@@ -1,0 +1,53 @@
+.task2 {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.calendar {
+  border-radius: 10px;
+  padding:10px;
+  background-color: black;
+  color: white;
+}
+
+.calendar_month {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.calendar_daysMarkerContainer {
+  display: flex;
+  gap:5px;
+}
+
+.calendar_dayMarker {
+  margin:0;
+  display: flex;
+  width:50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.calendar_dayMarker:nth-child(7n - 1) {
+  background-color: #db545a;
+}
+
+.calendar_dayMarker:nth-child(7n) {
+  background-color: #db545a;
+}
+
+.calendar_daysMarkerContainer .calendar_dayMarker {
+  background-color: black;
+}
+
+.calendar_grid {
+  display: grid;
+  gap:5px;
+  grid-template-columns: repeat(7,1fr);
+  grid-template-rows: repeat(5,1fr);
+}
