@@ -1,0 +1,81 @@
+.task7 {
+  padding: 40px;
+}
+
+.task7_container {
+  margin: auto;
+}
+
+.task7_button {
+  margin: auto;
+  color: #db545a;
+  display: flex;
+  background-color: #f1c50e;
+  border-radius: 12px;
+  padding:0 25px;
+  align-items: center;
+  width: 200px;
+  height:60px;
+  justify-content: center;
+}
+
+.task7_button:hover {
+  background-color: #db545a;
+  color: white;
+}
+
+.task7_buttonText {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.task7_grid {
+  min-height: 100px;
+  width: 580px;
+  padding:20px;
+  margin: 40px auto 0;
+  display: none;
+  grid-template-columns: repeat(5,1fr);
+  gap:20px;
+  border-radius: 12px;
+  border: 2px solid black;
+}
+
+.task7_money {
+  position: relative;
+  width: 100px;
+  height: 100px;
+
+  border-radius: 100px;
+}
+
+.task7_moneyImg {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  box-sizing: border-box;
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.task7_disappear {
+  animation: disappear 1.1s ease;
+}
+
+.task7_phrase {
+  font-size: 30px;
+  font-weight: 600;
+  margin:40px auto 0;
+  text-align: center;
+}
+

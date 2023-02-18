@@ -1,0 +1,15 @@
+.task4 {
+  padding: 40px;
+}
+
+.task4_container {
+  display: grid;
+  width: 100%;
+  height:300px;
+  gap:40px;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.task4_elem {
+  background-color: black;
+}

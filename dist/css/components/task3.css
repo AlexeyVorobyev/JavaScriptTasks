@@ -1,0 +1,12 @@
+.task3 {
+  padding: 40px;
+}
+
+.task3_root {
+  display: none;
+}
+
+.task3_result {
+  font-size: 20px;
+  margin: auto;
+}
