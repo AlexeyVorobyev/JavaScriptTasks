@@ -1,0 +1,30 @@
+.task8 {
+  padding:40px;
+}
+
+.task8_block {
+  position: relative;
+  display: flex;
+  width:300px;
+  height: 300px;
+  margin:0 auto;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 150px;
+}
+
+.task8_blockColor {
+  background-color: #f1c50e;
+  position: absolute;
+  top:0;
+  left:0;
+  width: inherit;
+  height: inherit;
+}
+
+.task8_hiddenText {
+  color: #db545a;
+  font-size: 20px;
+  font-weight: 600;
+}

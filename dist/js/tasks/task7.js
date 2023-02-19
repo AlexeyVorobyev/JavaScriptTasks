@@ -7,10 +7,12 @@ button.addEventListener('click', function () {
   if (grid.style.display == 'none') {
     grid.style.display='grid';
     if (grid.children.length == 0) phrase.style.display = 'block';
+    button.textContent = 'Закрыть схрон';
   }
   else {
     grid.style.display = 'none';
     phrase.style.display = 'none';
+    button.textContent = 'Открыть схрон';
   }
 });
 

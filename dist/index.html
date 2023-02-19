@@ -175,23 +175,38 @@
         </div>
       </div>
       <div class="cardQuestion__answerContainer task8">
-
+        <div class="task8_block">
+          <div class="task8_blockColor"></div>
+          <p class="task8_hiddenText">Hello World!</p>
+        </div>
       </div>
     </div>
     <div class="cardQuestion">
       <div class="cardQuestion__questionContainer">
-        <p class="cardQuestion__questionParagraph">Task 9</p>
+        <p class="cardQuestion__questionParagraph">Task 9,10</p>
         <div class="cardQuestion__spacer">
           <img class="cardQuestion__icon" src="img/downArrow.png" alt="">
         </div>
       </div>
       <div class="cardQuestion__answerContainer task9">
-
+        <div class="task9_container">
+          <h3 class="task9_header">WEB DEVELOPER FORM</h3>
+          <form class="form" id="form">
+            <input class="form_input" placeholder="Enter your name" id="name" name="name" required="required">
+            <input class="form_input" placeholder="Enter a valid email address" id="email" name="email" required="required" pattern="^[a-zA-Z0-9.!#$%&’*+\/=?^_`{|}~-]{2,}@([a-zA-Z0-9-]{2,}\.)*([a-zA-Z0-9-]{2,4})$">
+            <input class="form_input" placeholder="Enter a password" id="password" name="passwordFirst" required="required" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+            <input class="form_input" placeholder="Repeat your password" id="passwordCheck" name="passwordCheck" required="required">
+            <textarea class="form_input" type="text" placeholder="About you..." id="about" required="required"></textarea>
+            <button class="form_button" type="submit" name="subm">
+              <p class="form_buttonText">SUBMIT</p>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
     <div class="cardQuestion">
       <div class="cardQuestion__questionContainer">
-        <p class="cardQuestion__questionParagraph">Task 10</p>
+        <p class="cardQuestion__questionParagraph">Task 11</p>
         <div class="cardQuestion__spacer">
           <img class="cardQuestion__icon" src="img/downArrow.png" alt="">
         </div>
@@ -210,6 +225,8 @@
   <script src="js/tasks/task3.js"></script>
   <script src="js/tasks/task4.js"></script>
   <script src="js/tasks/task7.js"></script>
+  <script src="js/tasks/task8.js"></script>
+  <script src="js/tasks/task9.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

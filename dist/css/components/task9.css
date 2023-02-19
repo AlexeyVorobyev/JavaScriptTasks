@@ -1,0 +1,67 @@
+.task9 {
+  padding: 40px;
+}
+
+.task9_container {
+  margin: 0 auto;
+  background-color: black;
+  border-radius: 12px;
+  padding:10px;
+  width: 50%;
+}
+
+.task9_header {
+  margin:0;
+  font-size: 30px;
+  line-height: calc(30px*1.2);
+  font-family: 'Roboto',SansSerif;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+.form {
+  margin-top:10px;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+.form_input {
+  border:none;
+  border-radius: 12px;
+  height:49px;
+  padding-left:16px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#about {
+  height:108px;
+  padding: 12px 16px;
+  vertical-align: top;
+}
+
+.form_button {
+  background-color: white;
+  border: none;
+  border-radius: 12px;
+}
+
+.form_button:hover {
+  background-color: lightgray;
+}
+
+.form_buttonText {
+  color:black;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.form_input:valid {
+  border: 2px solid #32CD32;
+}
+
+.form_input:not(:placeholder-shown):invalid {
+  border: 2px solid #db545a;
+}
