@@ -71,11 +71,29 @@
 }
 
 .sapper_gridElem {
+  display: flex;
   border: 1px solid black;
   width:30px;
   height: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: dimgray;
 }
 
 .sapper_gridElem:hover {
-  background-color: #cccccc;
+  background-color: lightgrey;
+}
+
+.sapper_gridElemImgBomb {
+  width:25px;
+  height: 25px;
+  box-sizing: border-box;
+  filter:invert(98%) sepia(0%) saturate(9%) hue-rotate(222deg) brightness(103%) contrast(102%);
+}
+
+.sapper_end {
+  display: none;
+  margin:20px auto 0;
+  font-size: 20px;
+  text-align: center;
 }
