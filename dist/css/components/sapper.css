@@ -1,0 +1,81 @@
+.task10 {
+  padding: 40px;
+}
+
+.sapper {
+  margin:auto;
+  width:40%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border:2px solid black;
+  border-radius: 12px;
+}
+
+.sapper_buttonStart {
+  margin: 0 auto;
+  background-color: black;
+  border: none;
+  border-radius: 12px;
+  width: 50%;
+}
+
+.sapper_buttonStart:hover {
+  background-color: dimgrey;
+}
+
+.sapper_buttonStartText {
+  color:white;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.sapper_infoPanel {
+  margin: 20px auto 0;
+  display: flex;
+  align-items: center;
+}
+
+.sapper_infoImgBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.sapper_infoImg {
+  width: 25px;
+  height: 25px;
+  box-sizing: border-box;
+}
+
+.sapper_infoText {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.sapper_grid {
+  display: none;
+  overflow: hidden;
+  margin:20px auto 0;
+  width: fit-content;
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows: repeat(10,1fr);
+  gap:2px;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.sapper_gridElem {
+  border: 1px solid black;
+  width:30px;
+  height: 30px;
+}
+
+.sapper_gridElem:hover {
+  background-color: #cccccc;
+}
