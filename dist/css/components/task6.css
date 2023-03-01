@@ -1,0 +1,17 @@
+.task6 {
+  padding: 40px;
+}
+
+.task6_container {
+  margin:0 auto;
+  width:150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task6_img {
+  display: none;
+  width:inherit;
+  box-sizing: border-box;
+}

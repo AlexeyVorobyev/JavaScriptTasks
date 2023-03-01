@@ -1,0 +1,56 @@
+.task5__form {
+  display: flex;
+  background-color: black;
+  border-radius: 12px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 0;
+  gap:20px;
+  padding: 20px;
+  font-family: 'Roboto', SansSerif;
+}
+
+.task5 {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-direction:column ;
+}
+
+.task5__button {
+  background-color: white;
+  border: none;
+  width: 50%;
+  border-radius: 12px;
+}
+
+.task5__button:hover {
+  background-color: lightgray;
+}
+
+.task5__buttonText {
+  color:black;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.task5__input {
+  border:none;
+  border-radius: 12px;
+  height:49px;
+  padding-left:16px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.task5__input:valid {
+  border: 2px solid #32CD32;
+}
+
+.task5__input:not(:placeholder-shown):invalid {
+  border: 2px solid #db545a;
+}

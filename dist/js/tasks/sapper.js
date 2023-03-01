@@ -204,7 +204,7 @@ class Sapper {
     this.grid.gridDOM.style.display = 'grid';
     this.sapperEndText.style.display = 'none';
     this.grid.fillGrid();
-    this.grid.distributeBombs(10);
+    this.grid.distributeBombs(15);
     this.grid.calculateNumbers();
     this.grid.renderGrid();
     this.addEventListeners();
