@@ -16,12 +16,17 @@ button.addEventListener('click', function () {
   }
 });
 
-function destroy(event) {
+const checkVault = () => {
+  if (grid.children.length == 0) phrase.style.display = 'block';
+}
+
+function destroy(callback,event) {
   const elem = event.currentTarget;
   elem.className += ' task7_disappear';
   setTimeout(function () {
     elem.remove();
-    if (grid.children.length == 0) phrase.style.display = 'block';}, 1000);
+    callback();
+    }, 1000);
 }
 
 for (let i = 0; i < 15;i++) {
@@ -34,7 +39,7 @@ for (let i = 0; i < 15;i++) {
   money.style.gridRowEnd = (Math.floor(i/5+2)).toString();
 
 
-  money.addEventListener('click',destroy);
+  money.addEventListener('click', destroy.bind(null,checkVault));
 
   const moneyImg = document.createElement('img');
   moneyImg.className = 'task7_moneyImg';

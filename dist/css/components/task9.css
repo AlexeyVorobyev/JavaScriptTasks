@@ -65,3 +65,53 @@
 .form_input:not(:placeholder-shown):invalid {
   border: 2px solid #db545a;
 }
+
+.select_header {
+  margin: 0 0 0 16px;
+  font-size: 20px;
+  line-height: 1.2;
+  font-family: 'Roboto',SansSerif;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+.select {
+  margin: 0 0 0 64px;
+}
+
+.form_container {
+  padding: 10px 0;
+  display: flex;
+}
+
+.form_container_checkbox {
+  padding-left: 16px;
+  display: block;
+}
+
+.checkbox_header {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+  font-family: 'Roboto',SansSerif;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.checkbox_wrapper {
+  margin-top: 5px;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top:2px;
+}
+
+.checkbox_text {
+  color:white;
+  line-height: 1;
+}

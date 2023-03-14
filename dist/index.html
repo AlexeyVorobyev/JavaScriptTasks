@@ -214,7 +214,38 @@
             <input class="form_input" placeholder="Enter a valid email address" id="email" name="email" required="required" pattern="^[a-zA-Z0-9.!#$%&’*+\/=?^_`{|}~-]{2,}@([a-zA-Z0-9-]{2,}\.)*([a-zA-Z0-9-]{2,4})$">
             <input class="form_input" placeholder="Enter a password" id="password" name="passwordFirst" required="required" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
             <input class="form_input" placeholder="Repeat your password" id="passwordCheck" name="passwordCheck" required="required">
+            <div class="form_container">
+              <h4 class="select_header">Specialization:</h4>
+              <select class="select">
+                <option class="select_option" value="Front-end">Front-end developer</option>
+                <option class="select_option" value="Back-end">Back-end developer</option>
+                <option class="select_option" value="Full-stack">Full-stack developer</option>
+              </select>
+            </div>
             <textarea class="form_input" type="text" placeholder="About you..." id="about" required="required"></textarea>
+            <div class="form_container form_container_checkbox">
+              <h4 class="checkbox_header">Skills:</h4>
+              <div class="checkbox_wrapper">
+                <input class="checkbox" type="checkbox" id="HTML/CSS">
+                <label class="checkbox_text" for="HTML/CSS">HTML/CSS</label>
+              </div>
+              <div class="checkbox_wrapper">
+                <input class="checkbox" type="checkbox" id="JavaScript">
+                <label class="checkbox_text" for="JavaScript">JavaScript</label>
+              </div>
+              <div class="checkbox_wrapper">
+                <input class="checkbox" type="checkbox" id="JQuery">
+                <label class="checkbox_text" for="JQuery">JQuery</label>
+              </div>
+              <div class="checkbox_wrapper">
+                <input class="checkbox" type="checkbox" id="Bootstrap">
+                <label class="checkbox_text" for="Bootstrap">Bootstrap</label>
+              </div>
+              <div class="checkbox_wrapper">
+                <input class="checkbox" type="checkbox" id="React.js">
+                <label class="checkbox_text" for="React.js">React.js</label>
+              </div>
+            </div>
             <button class="form_button" type="submit" name="subm">
               <p class="form_buttonText">SUBMIT</p>
             </button>
